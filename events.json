@@ -7,6 +7,7 @@
     { "name": "CartoDB_Cause_of_death", "type": "string" },
     { "name": "latitude", "type": "number" },
     { "name": "longitude", "type": "number" },
-    { "name": "date", "type": "date" }
+    { "name": "date", "type": "date" },
+    { "name": "score", "type": "date" }
   ]
 }

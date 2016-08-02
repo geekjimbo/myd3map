@@ -86,22 +86,17 @@ function BarChart() {
 
     var xAccessor = function (d){ return d[xColumn]; };
 
-    var interval = d3.time.month;
-
-    var xExtent = d3.extent(data, xAccessor);
-
-    xExtent[1] = interval.offset(xExtent[1], 1);
-
     xScale
-      .domain(xExtent)
+      .domain(d3.extent(data, xAccessor))
       .range([0, innerBox.width]);
 
-    var numIntervals = interval.range(xScale.domain()[0], xScale.domain()[1]).length;
+   //var numMonths = d3.time.months(xScale.domain()[0], xScale.domain()[1]).length;
+    var numMonths = d3.time.days(xScale.domain()[0], xScale.domain()[1]).length;
 
     my.x = function(d) { return xScale(xAccessor(d)); }
 
     // Add 1 so the bars run together.
-    my.width = innerBox.width / numIntervals + 1;
+    my.width = innerBox.width / numMonths + 1;
     my.xScale = xScale;
 
   });

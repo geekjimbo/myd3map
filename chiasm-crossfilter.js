@@ -21,7 +21,7 @@ function ChiasmCrossfilter() {
         var group = groups[groupName];
         var dimension = group.dimension;
         var cfDimension = cf.dimension(function (d){ return d[dimension]; });
-
+        //var cfDimension = cf.dimension(function (d){ console.log(d[dimension]); return d[dimension]; });
         // Generate an aggregate function by parsing the "aggregation" config option.
         var aggregate;
         if(group.aggregation){
