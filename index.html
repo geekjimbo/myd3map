@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Chiasm Crossfilter Integration</title>
+    <title>Lantern-Dvinciworks DataViz de Mapa Interactivo</title>
     
     <!-- A functional reactive model library. See github.com/curran/model -->
     <script src="./scripts/model-v0.2.4.js"></script>
@@ -45,10 +45,10 @@
       #chiasm-container {
         background-color: white;
         position: fixed;
-        left: 20px;
-        right: 20px;
-        top: 20px;
-        bottom: 20px;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
       }
 
       /* Style the brush. Draws from http://bl.ocks.org/mbostock/4343214 */
@@ -79,9 +79,12 @@
     </style>
   </head>
   <body>
-
     <!-- Chiasm component DOM elements will be injected into this div. -->
-    <div id="chiasm-container"></div>
+    <div>
+      <h1>Powered by Lantern-Dvinciworks </h1>
+      <div id="chiasm-container">
+      </div>
+    </div>
     
     <!-- This is the main program that sets up the Chiasm application. -->
     <script>
