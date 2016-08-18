@@ -1,7 +1,6 @@
 {
   "columns": [
-    { "name": "storeid", "type": "string" },
-    { "name": "storename", "type": "string" },
+    { "name": "plan", "type": "string" },
     { "name": "date", "type": "date" },
     { "name": "latitude", "type": "number" },
     { "name": "longitude", "type": "number" },

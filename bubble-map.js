@@ -99,12 +99,18 @@ function BubbleMap() {
 
         color: color(d),
         weight: 1,
-        clickable: false
+        clickable: true
       });
 
       circleMarker.setRadius(r(d));
 
-      circleMarker.addTo(my.map);
+      circleMarker.addTo(my.map)
+        .bindPopup(
+          [
+           "Plan logístico "+d.plan + " - " + d.qty_notes + " eventos", 
+           d.date
+          ]
+         .join("<br>"));
 
       return circleMarker;
     });
